@@ -238,6 +238,7 @@ class ContactBaseForm(forms.Form):
         Build and send the email message.
         
         """
+        # FIXME: Should not be restricted by send_mail() (e.g. reply-to)
         send_mail(fail_silently=fail_silently, **self.get_message_dict())
 
 
